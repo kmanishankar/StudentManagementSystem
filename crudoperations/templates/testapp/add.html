@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <style>
+    .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:50%;
+    color:white;
+    border:2px solid white;
+   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+
+<!--    border:2px solid red;-->
+<!--    height:250px;-->
+<!--    width:50%;-->
+<!--    margin-top:30px;-->
+    }
+    body{
+    height:641px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:white;
+    justify-content:center;
+    background: linear-gradient(135deg, #4b0082, #8a2be2);
+    background-repeat:no-repeat;
+    background-size:cover;
+    }
+
+       .form-group {
+        margin-bottom: 15px;
+    }
+    .form-label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+<!--    .form-input {-->
+<!--        width: 100%;-->
+<!--        padding: 8px;-->
+<!--        border-radius: 5px;-->
+<!--        border: 1px solid #ccc;-->
+<!--    }-->
+  </style>
+
+</head>
+<body>
+ <h1 >Paying Guest Details</h1>
+<div class="container">
+
+   <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group">
+            <label class="form-label">{{ field.label }}</label>
+            {{ field }}
+<!--            <div style="color:red;">{{ field.errors }}</div>-->
+        </div>
+    {% endfor %}
+
+  <input type="submit" class="btn btn-primary" name="" value="submit">
+</form>
+</div>
+</body>
+</html>
