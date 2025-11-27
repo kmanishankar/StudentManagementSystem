@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<nav>
+    <div class="container">
+        <a href="/admin_dashboard">Home</a>
+        <a href="/view_students">View_Students</a>
+        <a href="/year_wise">Count_of_Students</a>
+        <a href="/ffp_details">First_Year_Fee_Details</a>
+        <a href="/sfp_details">Second_Year_Fee_Details</a>
+        <a href="/tfp_details">Third_Year_Fee_Details</a>
+         <a href="/fourth_details">Fourth_Year_Fee_Details</a>
+        <a href="/at_details">Attendance_Report</a>
+        <a href="/logout">LogOut</a>
+    </div>
+</nav>
+{% block body_block%}
+{% endblock %}
+</body>
+</html>

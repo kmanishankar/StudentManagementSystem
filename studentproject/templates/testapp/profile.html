@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'testapp/base1.html'%}
+{%load static%}
+{% block body_block %}
+<div class="content1">
+   <div class="content12">
+       <h2 style="color:orange; font-weight:800;">My Profile</h2>
+<div class="profile-box">
+    <p>Roll Number : {{student.roll_number}}</p>
+    <p>Name : {{student.name}}</p>
+    <p>Father Name : {{student.father_name}}</p>
+    <p>Gender : {{student.gender}}</p>
+    <p>Branch : {{student.branch}}</p>
+    <p>Year : {{student.year}}</p>
+</div>
+   </div>
+</div>
+{% endblock %}

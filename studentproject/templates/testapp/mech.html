@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{% block body_block%}
+ <div class="content1">
+  <h2 style="color:orange">All Students List Branch-Wise</h2>
+  <br>
+  <div class="an">
+ <a href="/cse_view" class="btn btn-primary">CSE</a>
+  <a href="/ece_view" class="btn btn-success">ECE</a>
+  <a href="/mech_view" class="btn btn-info">MECH</a>
+  <a href="/civil_view" class="btn btn-danger">CIVIL</a>
+  <a href="/eee_view" class="btn btn-warning">EEE</a>
+  </div>
+   <br>
+   <div class="content12">
+<h2 style="color:orange">MECH List</h2>
+        <form method="GET">
+           {% csrf_token %}
+           <input type="text" name="q" placeholder="search by name or year or roll no.." style="padding:8px; width:300px;">
+           <button type="submit" class="btn btn-success" >search</button>
+       </form>
+       <h2 style="color:orange">First Year</h2>
+<table border="1" class="stud-table" >
+  <thead class="stud-table1">
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Father Name</th>
+    <th>Branch</th>
+    <th>Year</th>
+    <th>Attendance</th>
+    <th>Fees</th>
+    <th>Fee Payment</th>
+    <th >Action</th>
+  </tr>
+  </thead>
+  {% for stud in student%}
+  {% if stud.year == 1%}
+  <tr class="stud-table2">
+    <td>{{stud.roll_number}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.gender}}</td>
+    <td>{{stud.father_name}}</td>
+    <td>{{stud.branch}}</td>
+    <td>{{stud.year}}</td>
+    <td>{{stud.attendance}}</td>
+    <td>{{stud.fees}}</td>
+    <td>{{stud.fee_payment}}</td>
+    <td>
+      <a href="/edit/{{stud.id}}" class="btn btn-primary">Edit</a>
+      <a href="/delete4/{{stud.id}}" class="btn btn-success">Delete</a>
+    </td>
+  </tr>
+  {%endif%}
+  {% endfor %}
+</table>
+       <h2 style="color:orange">Second Year</h2>
+<table border="1" class="stud-table" >
+  <thead class="stud-table1">
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Father Name</th>
+    <th>Branch</th>
+    <th>Year</th>
+    <th>Attendance</th>
+    <th>Fees</th>
+    <th>Fee Payment</th>
+    <th >Action</th>
+  </tr>
+  </thead>
+  {% for stud in student%}
+  {% if stud.year == 2%}
+  <tr class="stud-table2">
+    <td>{{stud.roll_number}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.gender}}</td>
+    <td>{{stud.father_name}}</td>
+    <td>{{stud.branch}}</td>
+    <td>{{stud.year}}</td>
+    <td>{{stud.attendance}}</td>
+    <td>{{stud.fees}}</td>
+    <td>{{stud.fee_payment}}</td>
+    <td>
+      <a href="/edit/{{stud.id}}" class="btn btn-primary">Edit</a>
+      <a href="/delete4/{{stud.id}}" class="btn btn-success">Delete</a>
+    </td>
+  </tr>
+  {%endif%}
+  {% endfor %}
+</table>
+       <h2 style="color:orange">Third Year</h2>
+<table border="1" class="stud-table" >
+  <thead class="stud-table1">
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Father Name</th>
+    <th>Branch</th>
+    <th>Year</th>
+    <th>Attendance</th>
+    <th>Fees</th>
+    <th>Fee Payment</th>
+    <th >Action</th>
+  </tr>
+  </thead>
+  {% for stud in student%}
+  {% if stud.year == 3%}
+  <tr class="stud-table2">
+    <td>{{stud.roll_number}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.gender}}</td>
+    <td>{{stud.father_name}}</td>
+    <td>{{stud.branch}}</td>
+    <td>{{stud.year}}</td>
+    <td>{{stud.attendance}}</td>
+    <td>{{stud.fees}}</td>
+    <td>{{stud.fee_payment}}</td>
+    <td>
+      <a href="/edit/{{stud.id}}" class="btn btn-primary">Edit</a>
+      <a href="/delete4/{{stud.id}}" class="btn btn-success">Delete</a>
+    </td>
+  </tr>
+  {%endif%}
+  {% endfor %}
+</table>
+       <h2 style="color:orange">Fourth Year</h2>
+<table border="1" class="stud-table" >
+  <thead class="stud-table1">
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Father Name</th>
+    <th>Branch</th>
+    <th>Year</th>
+    <th>Attendance</th>
+    <th>Fees</th>
+    <th>Fee Payment</th>
+    <th >Action</th>
+  </tr>
+  </thead>
+  {% for stud in student%}
+  {% if stud.year == 4%}
+  <tr class="stud-table2">
+    <td>{{stud.roll_number}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.gender}}</td>
+    <td>{{stud.father_name}}</td>
+    <td>{{stud.branch}}</td>
+    <td>{{stud.year}}</td>
+    <td>{{stud.attendance}}</td>
+    <td>{{stud.fees}}</td>
+    <td>{{stud.fee_payment}}</td>
+    <td>
+      <a href="/edit/{{stud.id}}" class="btn btn-primary">Edit</a>
+      <a href="/delete4/{{stud.id}}" class="btn btn-success">Delete</a>
+    </td>
+  </tr>
+  {%endif%}
+  {% endfor %}
+</table>
+     </div>
+<br>
+  </div>
+{%endblock%}

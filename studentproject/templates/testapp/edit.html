@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+{%load static%}
+{% block body_block %}
+<div class="content1">
+    <h1 style="color:orange">Student Details</h1>
+ <div class="container1">
+   <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group">
+            <label class="form-label">{{ field.label }}</label>
+            {{ field }}
+<!--            <div style.css="color:red;">{{ field.errors }}</div>-->
+        </div>
+
+    {% endfor %}
+
+  <input type="submit" class="btn btn-success" name="" value="submit">
+</form>
+     </div>
+</div>
+{%endblock%}

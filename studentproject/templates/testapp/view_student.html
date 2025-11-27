@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+{%load static%}
+{% block body_block%}
+<div class="content1">
+  <h2 style="color:orange">All Students List Branch-Wise</h2>
+  <br>
+  <div class="an">
+ <a href="/cse_view" class="btn btn-primary">CSE</a>
+  <a href="/ece_view" class="btn btn-success">ECE</a>
+  <a href="/mech_view" class="btn btn-info">MECH</a>
+  <a href="/civil_view" class="btn btn-danger">CIVIL</a>
+  <a href="/eee_view" class="btn btn-warning">EEE</a>
+  </div>
+  </div>
+{%endblock%}
